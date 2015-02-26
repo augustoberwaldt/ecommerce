@@ -16,6 +16,11 @@ security:
             security: false
             context: context
 
+        sample:
+            pattern: ^/api/sample
+            security: false
+            context: context
+
         secured_area:
             pattern:   ^/
             http_basic: ~
@@ -36,7 +41,7 @@ security:
         - { path: ^/, roles: [ROLE_USER, ROLE_ADMIN] }
 
     encoders:
-        Clobb\AppBundle\Entity\Usuario:
+        Portotech\AppBundle\Entity\Usuario:
             algorithm: bcrypt
             cost: 12
             #algorithm: sha512

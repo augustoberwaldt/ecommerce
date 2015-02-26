@@ -2,7 +2,7 @@ clobb_app:
     resource: "@ClobbAppBundle/Controller/"
     type:     annotation
     prefix:   /api
-    defaults: { _format: 'json' }
+#    defaults: { _format: 'json' }
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

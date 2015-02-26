@@ -1,87 +1,87 @@
-Clobb\AppBundle\Entity\Pessoa:
-    constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
-            fields: [cnpj]
-            message : "message.cnpj.Unique"
-            groups: [pjuridica]
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
-            fields: [cpf]
-            message : "message.cpf.Unique"
-            groups: [pfisica]
-
-    properties:
-        fkCategoriaPessoa:
-            - NotBlank: { message: "message.fkCategoriaPessoa.NotBlank" }
-        razaoSocial:
-            - NotBlank: { groups: [pjuridica], message: "message.razaoSocial.NotBlank" }
-        nomeFantasia:
-            - NotBlank: { groups: [pjuridica], message: "message.nomeFantasia.NotBlank" }
-        cnpj:
-            - NotBlank: { groups: [pjuridica], message: "message.cnpj.NotBlank" }
-        nome:
-            - NotBlank: { groups: [pfisica], message: "message.nome.NotBlank" }
-        cpf:
-            - NotBlank: { groups: [pfisica], message: "message.cpf.NotBlank" }
-        areaArea:
-            - Count:
-                min: 1
-                minMessage: "message.areaArea.Count"
-                groups: [pjuridica]
-        logradouro:
-            - NotBlank: { message: "message.logradouro.NotBlank" }
-        numero:
-            - NotBlank: { message: "message.numero.NotBlank" }
-        cidade:
-            - NotBlank: { message: "message.cidade.NotBlank" }
-        bairro:
-            - NotBlank: { message: "message.bairro.NotBlank" }
-        cep:
-            - NotBlank: { message: "message.cep.NotBlank" }
-        contato:
-            - NotBlank: { message: "message.contato.NotBlank" }
-        email:
-            - NotBlank: { message: "message.email.NotBlank" }
-            - Email: { message: "message.email.Email" }
-
-Portotech\AppBundle\Entity\CategoriaPessoa:
-    constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
-            fields: [nome]
-            message : "message.nome.Unique"
-
-    properties:
-        nome:
-            - NotBlank: { message: "message.nome.NotBlank" }
-
-
-Portotech\AppBundle\Entity\Area:
-    constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
-            fields: [nome]
-            message : "message.nome.Unique"
-
-    properties:
-        nome:
-            - NotBlank: { message: "message.nome.NotBlank" }
-        descricao:
-            - NotBlank: { message: "message.descricao.NotBlank" }
-
-Portotech\AppBundle\Entity\Usuario:
-    constraints:
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
-            fields: [nome]
-            message : "message.nome.Unique"
-        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
-            fields: [email]
-            message : "message.email.Unique"
-
-    properties:
-        nome:
-            - NotBlank: { message: "message.nome.NotBlank" }
-        email:
-            - NotBlank: { message: "message.email.NotBlank" }
-            - Email: { message: "message.email.Email" }
-        areaArea:
-            - Count:
-                min: 1
-                minMessage: "message.areaArea.Count"
+#Clobb\AppBundle\Entity\Pessoa:
+#    constraints:
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [cnpj]
+#            message : "message.cnpj.Unique"
+#            groups: [pjuridica]
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [cpf]
+#            message : "message.cpf.Unique"
+#            groups: [pfisica]
+#
+#    properties:
+#        fkCategoriaPessoa:
+#            - NotBlank: { message: "message.fkCategoriaPessoa.NotBlank" }
+#        razaoSocial:
+#            - NotBlank: { groups: [pjuridica], message: "message.razaoSocial.NotBlank" }
+#        nomeFantasia:
+#            - NotBlank: { groups: [pjuridica], message: "message.nomeFantasia.NotBlank" }
+#        cnpj:
+#            - NotBlank: { groups: [pjuridica], message: "message.cnpj.NotBlank" }
+#        nome:
+#            - NotBlank: { groups: [pfisica], message: "message.nome.NotBlank" }
+#        cpf:
+#            - NotBlank: { groups: [pfisica], message: "message.cpf.NotBlank" }
+#        areaArea:
+#            - Count:
+#                min: 1
+#                minMessage: "message.areaArea.Count"
+#                groups: [pjuridica]
+#        logradouro:
+#            - NotBlank: { message: "message.logradouro.NotBlank" }
+#        numero:
+#            - NotBlank: { message: "message.numero.NotBlank" }
+#        cidade:
+#            - NotBlank: { message: "message.cidade.NotBlank" }
+#        bairro:
+#            - NotBlank: { message: "message.bairro.NotBlank" }
+#        cep:
+#            - NotBlank: { message: "message.cep.NotBlank" }
+#        contato:
+#            - NotBlank: { message: "message.contato.NotBlank" }
+#        email:
+#            - NotBlank: { message: "message.email.NotBlank" }
+#            - Email: { message: "message.email.Email" }
+#
+#Clobb\AppBundle\Entity\CategoriaPessoa:
+#    constraints:
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [nome]
+#            message : "message.nome.Unique"
+#
+#    properties:
+#        nome:
+#            - NotBlank: { message: "message.nome.NotBlank" }
+#
+#
+#Clobb\AppBundle\Entity\Area:
+#    constraints:
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [nome]
+#            message : "message.nome.Unique"
+#
+#    properties:
+#        nome:
+#            - NotBlank: { message: "message.nome.NotBlank" }
+#        descricao:
+#            - NotBlank: { message: "message.descricao.NotBlank" }
+#
+#Clobb\AppBundle\Entity\Usuario:
+#    constraints:
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [nome]
+#            message : "message.nome.Unique"
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [email]
+#            message : "message.email.Unique"
+#
+#    properties:
+#        nome:
+#            - NotBlank: { message: "message.nome.NotBlank" }
+#        email:
+#            - NotBlank: { message: "message.email.NotBlank" }
+#            - Email: { message: "message.email.Email" }
+#        areaArea:
+#            - Count:
+#                min: 1
+#                minMessage: "message.areaArea.Count"
