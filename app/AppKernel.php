@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new Clobb\AppBundle\ClobbAppBundle(),
             //new Nelmio\CorsBundle\NelmioCorsBundle(),
+            new Clobb\ManagerBundle\ClobbManagerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

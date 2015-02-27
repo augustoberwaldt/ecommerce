@@ -1,7 +1,12 @@
+clobb_manager:
+    resource: "@ClobbManagerBundle/Controller/"
+    type:     annotation
+    prefix:   /api/mng
+
 clobb_app:
     resource: "@ClobbAppBundle/Controller/"
     type:     annotation
-    prefix:   /api
+    prefix:   /api/app
 #    defaults: { _format: 'json' }
 
 NelmioApiDocBundle:
