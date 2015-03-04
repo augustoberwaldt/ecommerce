@@ -1,5 +1,4 @@
-web/dist
-web/bundles
+
 src/Portotech/AppBundle/Resources/views
 src/Portotech/AppBundle/Tests
 app/bootstrap.php.cache
