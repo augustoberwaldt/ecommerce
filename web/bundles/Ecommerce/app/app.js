@@ -1,24 +1,18 @@
+var app = angular.module('app', ['ngRoute']);
 
- var app = angular.module('app', ['ngRoute','ngResource']);
- alert('dvds');
- app.config(['$routeProvider',function($routeProvider){
- 
- $routeProvider.
- 	when('views/',{
+app.config(['$routeProvider',function($routeProvider,$location){
+
+	$routeProvider.
+ 	when('/',{
  		controller:'homeController', 
- 		templateUrl:'/home/home.html'
+ 		templateUrl:'home/home.html'
     }).
- 	when('usuarios/',{
+ 	when('/usuarios',{
  		controller:'userController',
- 		templateUrl:'/usuarios/user.html'
+ 		templateUrl:'usuarios/user.html'
  	}).
  	when('/login',{
  		controller:'loginController', 
- 		templateUrl:'login.html'
-    }).
-  	otherwise(
-  		{
-  			redirectTo:'/scascascas'
-         }
-       );
+ 		templateUrl:'login/login.html'
+    })
 }]);
